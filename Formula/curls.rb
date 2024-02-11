@@ -6,7 +6,7 @@ class Curls < Formula
   version "0.0.1"
   sha256 "11b1becf7d4eea64d5834f92b17bac8eefc650598cecdcde1efa3d5c6840c703"
 
-  depends_on "python@3.9"
+  depends_on "python@3.11"
 
   resource "peewee" do
     url "https://files.pythonhosted.org/packages/8d/a5/89cdbc4a7f6d7a0624c120be102db770ee717aa371066581e3daf2beb96f/peewee-3.17.1.tar.gz"
