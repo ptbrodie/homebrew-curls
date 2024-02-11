@@ -2,11 +2,17 @@ class Curls < Formula
   include Language::Python::Virtualenv
   desc "A command-line alternative to Postman"
   homepage "https://github.com/ptbrodie/curls"
-  url "https://github.com/ptbrodie/curls/archive/refs/tags/v0.0.1.tar.gz"
+  url "https://github.com/ptbrodie/curls/archive/refs/tags/0.0.1.tar.gz"
   version "0.0.1"
-  sha256 "11b1becf7d4eea64d5834f92b17bac8eefc650598cecdcde1efa3d5c6840c703"
+  sha256 "73d1ebb799bb68a2a580deff7834963637d06982712615430e7ccd3382203054"
 
-  depends_on "python@3.11"
+  depends_on "python"
+  depends_on "curl"
+
+  resource "terminaltables" do
+    url "https://files.pythonhosted.org/packages/9b/c4/4a21174f32f8a7e1104798c445dacdc1d4df86f2f26722767034e4de4bff/terminaltables-3.1.0.tar.gz"
+    sha256 "f3eb0eb92e3833972ac36796293ca0906e998dc3be91fbe1f8615b331b853b81"
+  end
 
   resource "peewee" do
     url "https://files.pythonhosted.org/packages/8d/a5/89cdbc4a7f6d7a0624c120be102db770ee717aa371066581e3daf2beb96f/peewee-3.17.1.tar.gz"
@@ -66,11 +72,6 @@ class Curls < Formula
   resource "tzlocal" do
     url "https://files.pythonhosted.org/packages/04/d3/c19d65ae67636fe63953b20c2e4a8ced4497ea232c43ff8d01db16de8dc0/tzlocal-5.2.tar.gz"
     sha256 "8d399205578f1a9342816409cc1e46a93ebd5755e39ea2d85334bea911bf0e6e"
-  end
-
-  resource "terminaltables" do
-    url "https://files.pythonhosted.org/packages/f5/fc/0b73d782f5ab7feba8d007573a3773c58255f223c5940a7b7085f02153c3/terminaltables-3.1.10.tar.gz"
-    sha256 "ba6eca5cb5ba02bba4c9f4f985af80c54ec3dccf94cfcd190154386255e47543"
   end
 
   def install
