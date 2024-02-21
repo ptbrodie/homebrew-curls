@@ -2,12 +2,11 @@ class Curls < Formula
   include Language::Python::Virtualenv
   desc "A command-line alternative to Postman"
   homepage "https://github.com/ptbrodie/curls"
-  url "https://github.com/ptbrodie/curls/archive/refs/tags/0.0.1.tar.gz"
-  version "0.0.1"
-  sha256 "73d1ebb799bb68a2a580deff7834963637d06982712615430e7ccd3382203054"
+  url "https://github.com/ptbrodie/curls/archive/refs/tags/0.0.2.tar.gz"
+  version "0.0.2"
+  sha256 "b6d6003820193f14b30c2c31db1297cc2015af2ed1ac09109bec64a2ce903539"
 
   depends_on "python"
-  depends_on "curl"
 
   resource "terminaltables" do
     url "https://files.pythonhosted.org/packages/9b/c4/4a21174f32f8a7e1104798c445dacdc1d4df86f2f26722767034e4de4bff/terminaltables-3.1.0.tar.gz"
@@ -72,6 +71,11 @@ class Curls < Formula
   resource "tzlocal" do
     url "https://files.pythonhosted.org/packages/04/d3/c19d65ae67636fe63953b20c2e4a8ced4497ea232c43ff8d01db16de8dc0/tzlocal-5.2.tar.gz"
     sha256 "8d399205578f1a9342816409cc1e46a93ebd5755e39ea2d85334bea911bf0e6e"
+  end
+
+  resource "termcolor" do
+    url "https://files.pythonhosted.org/packages/10/56/d7d66a84f96d804155f6ff2873d065368b25a07222a6fd51c4f24ef6d764/termcolor-2.4.0.tar.gz"
+    sha256 "aab9e56047c8ac41ed798fa36d892a37aca6b3e9159f3e0c24bc64a9b3ac7b7a"
   end
 
   def install
